@@ -1,0 +1,48 @@
+{
+  "extends": [
+    "standard",
+    "plugin:wdio/recommended"
+  ],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 2016,
+    "sourceType": "module"
+  },
+  "rules": {
+    "indent": [
+      2,
+      4
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "comma-dangle": [
+      "error",
+      "only-multiline"
+    ],
+    "max-len": [
+      "error",
+      {
+        "code": 110
+      }
+    ],
+    "no-var": "error"
+  },
+  "globals": {
+    "$": true,
+    "$$": true,
+    "browser": true,
+    "driver": true,
+    "expect": true,
+  },
+  "plugins": [
+    "wdio",
+    "import",
+    "mocha"
+  ],
+  "env": {
+    "mocha": true,
+    "es6": true
+  }
+}
